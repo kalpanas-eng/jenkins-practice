@@ -1,24 +1,26 @@
+
 pipeline {
-  agent any
-  stages {
-    stage('Build') {
-      steps {
-        echo 'Hello Jenkins'
-        bat 'ho "Compiling Application"'
-      }
-    }
+    agent any
 
-    stage('Test') {
-      steps {
-        echo 'Testing successful'
-      }
-    }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Hello Jenkins'
 
-    stage('Deploy') {
-      steps {
-        echo 'Deployment successful'
-      }
-    }
+                bat 'echo Compiling Application'
+            }
+        }
 
-  }
+        stage('Test') {
+            steps {
+                echo 'Testing Application'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying Application'
+            }
+        }
+    }
 }
