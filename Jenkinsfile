@@ -5,30 +5,20 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building the project'
+                echo 'Hello Jenkins'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Testing the project'
+                echo 'Testing successful'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying the project'
+                echo 'Deployment successful'
             }
-        }
-    }
-
-    post {
-        success {
-            echo 'Pipeline completed successfully!'
-        }
-
-        failure {
-            echo 'Pipeline failed!'
         }
     }
 }
